@@ -115,7 +115,7 @@ export default function Home() {
           
           {carreras.map(carrera => (
             <div key={carrera.id} className={`h-full overflow-y-auto bg-[#3D494E] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] ${selectedCarrera === carrera.id ? 'block' : 'hidden'}`}>
-              <div className="flex justify-start md:justify-start lg:justify-between xl:justify-start items-center relative text-white" style={{backgroundImage: `url(/carreras/bg-${carrera.slug}.png)`, backgroundSize: `cover`, backgroundPosition: `center`}}>
+              <div className="flex justify-between md:justify-start lg:justify-between xl:justify-start items-center relative text-white" style={{backgroundImage: `url(/carreras/bg-${carrera.slug}.png)`, backgroundSize: `cover`, backgroundPosition: `center`}}>
                 <div className="absolute xl:top-12 xl:right-12 lg:top-9 lg:right-9 top-6 right-6 z-10">
                   <button onClick={handleCloseCarrera} className="uppercase font-semibold text-sm cursor-pointer tracking-wider flex items-center gap-4">
                     VOLVER AL INICIO
@@ -136,8 +136,8 @@ export default function Home() {
                     </button>
                 </div>
                 <h1 className="uppercase font-black lg:pl-16 pl-8 max-w-2/5">{carrera.nombre}</h1>
-                <img className="max-w-1/2 lg:h-110 h-65 object-cover lg:pt-10 sm:pt-0 pt-10 xl:pt-0 xl:ml-15" src={`/carreras/personaje-${carrera.slug}.png`} alt="" />
-                <div className="absolute w-1/3 text-center lg:right-0 lg:left-16 left-8 md:bottom-2 bottom-4">
+                <img className="max-w-1/2  md:max-w-1/2 lg:h-110 md:h-65 h-60 object-cover lg:pt-10 sm:pt-0 pt-10 xl:pt-0 xl:ml-15" src={`/carreras/personaje-${carrera.slug}.png`} alt="" />
+                <div className="absolute md:w-1/3 w-2/5 text-center lg:right-0 lg:left-16 left-8 md:bottom-2 bottom-4">
                   <img src="/slogan-estudiantes.png" alt="" />
                 </div>
               </div>
